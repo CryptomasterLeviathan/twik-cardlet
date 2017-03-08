@@ -1,0 +1,14 @@
+App ID:
+a000000617003111841d0101
+
+Select Command:
+00a404000Ca000000617003111841d0101
+
+
+
+Command to Get Info
+00900000
+
+
+Command to hash value
+0030000004

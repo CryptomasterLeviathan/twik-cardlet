@@ -1,0 +1,32 @@
+apply plugin: 'fidesmo'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url('http://releases.marmeladburk.fidesmo.com/') }
+    }
+
+    dependencies {
+        classpath 'com.fidesmo:gradle-fidesmo:0.1.10'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+javacard {
+    cap {
+        aid = "${fidesmoPrefix}:0x01"
+        packageName = 'ca.cryptomasterleviathan.twikcardlet'
+        version = '1.0'
+        applet {
+            aid = "${fidesmoPrefix}:0x01:0x01"
+            className = 'TwikCardlet'
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
